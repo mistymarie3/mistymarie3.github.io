@@ -91,6 +91,9 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 .tilepage article>p:first-child,.tilepage article>h3{text-align:center}
 .tilepage article>h3 img{margin:0 auto}
 .tilepage article>img:first-child{width:auto!important;margin:-22px -22px 0!important;max-width:none!important;align-self:stretch}
+.series-grid{}
+@media (max-width:1000px){.series-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (max-width:640px){.series-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}}
 .feat:hover{border-color:#EC3A8C!important}
 .motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(19px,4.8vw,34px);letter-spacing:.01em;line-height:1.3;color:#FFF5E9;margin:0;text-align:center;white-space:nowrap;display:flex;align-items:center;gap:18px;justify-content:center}
 .motto::before,.motto::after{content:"";width:40px;height:1px;background:#C5A46D;flex:none}
@@ -104,7 +107,7 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 <div class="topbar" style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #C5A46D; border-bottom: 1px solid #C5A46D; padding: 10px 0; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #D9B877"><span>The Official Site · Los Angeles · Available to Travel</span><a href="#contact" style="color: #D9B877; text-decoration: none">Book Misty &#8594;</a></div>
 <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(64px, 12vw, 176px); line-height: 0.9; letter-spacing: 0.02em; text-transform: uppercase; text-align: center; color: #FFF5E9">Misty Marie</h1>
 <p style="margin: 0; text-align: center; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #D9B877; line-height: 2; max-width: 760px; align-self: center" class="nav titles"><a href="acting.html">Actor</a> · <a href="modeling.html">Model</a> · <a href="dance.html">Dancer</a> · <a href="skating.html">Ice Skater</a> · <a href="modeling.html#coaching">Runway Coach</a> · <a href="#contact">Host</a> · <a href="music.html">Director</a> · <a href="music.html">Producer</a> · <a href="author.html">Writer</a> · <a href="modeling.html">Stylist</a> · <a href="art.html">Artist</a></p>
-<nav class="nav" aria-label="Sections" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase"><a href="acting.html">Acting</a><a href="modeling.html">Modeling</a><a href="music.html">Music</a><a href="skating.html">Ice Skating</a><a href="dance.html">Dance</a><a href="raspy.html">Raspy Remedies</a><a href="art.html">Artist</a><a href="author.html">Author</a></nav>
+<nav class="nav" aria-label="Sections" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase"><a href="acting.html">Acting</a><a href="modeling.html">Modeling</a><a href="music.html">Music</a><a href="skating.html">Ice Skating</a><a href="dance.html">Dance</a><a href="raspy.html">Raspy Remedies</a><a href="art.html">Artist</a><a href="author.html">Author</a><a href="series.html">Model Vrs Mannequin</a></nav>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; margin-top: 16px">
 <img src="1-photos/assets/f569375ae7.jpg" alt="Misty Marie in a navy knit set, looking over her shoulder" style="width: 100%; max-width: 560px; aspect-ratio: 720 / 875; height: auto; object-fit: cover; object-position: center top; border-radius: 4px; display: block; margin: 0 auto">
 <p class="motto">Reality in imaginary circumstances.</p>
@@ -179,6 +182,7 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 <div style="display: flex; flex-direction: column; gap: 10px"><video controls playsinline preload="none" poster="1-photos/assets/0d91bbea0a.jpg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; border: 1px solid #C5A46D; border-radius: 4px; box-sizing: border-box; display: block"><source src="3-videos-B/assets/90af5ff28e.mp4" type="video/mp4"></video><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #FFF5E9">Acting Reel</span></div>
 <div style="display: flex; flex-direction: column; gap: 10px"><video controls playsinline preload="none" poster="1-photos/assets/363fc6dfb3.jpg" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; border: 1px solid #C5A46D; border-radius: 4px; box-sizing: border-box; display: block"><source src="2-videos-A/assets/405ed1a286.mp4" type="video/mp4"></video><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #FFF5E9">Music Video</span></div>
 </div>
+<a href="series.html" style="align-self: center; color: #D9B877; text-decoration: none; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid #C5A46D; padding-bottom: 4px">Watch the Model Vrs Mannequin series &#8594;</a>
 </div>
 </section>
 

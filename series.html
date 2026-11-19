@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Vrs Mannequin — Misty Marie</title>
+<meta name="description" content="Official site of Misty Marie: SAG-AFTRA actor, model, dancer, figure skater, runway coach, and artist based in Los Angeles.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@400;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#140D0A}
+a{color:#140D0A}a:hover{color:#EC3A8C}
+</style>
+
+<style>
+.door .pop{display:none}.door:hover .pop,.door:focus .pop{display:block}
+.door:hover,.door:focus{border-bottom-color:#EC3A8C!important}
+#portfolio[hidden]{display:none!important}
+.hbtn:hover,.hbtn:focus{background:#EC3A8C!important;color:#140D0A!important;border-color:#EC3A8C!important}
+#totop{position:fixed;left:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:6px;padding:9px 14px;background:#140D0A;color:#D9B877;border:1px solid #C5A46D;border-radius:999px;font:12px/1 Lato,system-ui,sans-serif;letter-spacing:2px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .3s}
+#totop.show{opacity:.92;pointer-events:auto}#totop:hover{color:#FFF5E9;border-color:#EC3A8C}
+html{scroll-behavior:smooth}
+img,video{max-width:100%}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+details summary::-webkit-details-marker{display:none}
+@media (max-width:760px){
+ [style*="grid-template-columns"]{grid-template-columns:1fr!important}
+ [style*="font-size: 64px"]{font-size:44px!important}
+ section{padding-left:18px!important;padding-right:18px!important}
+ [style*="max-width: 240px"],[style*="max-width: 320px"]{max-width:100%!important}
+}
+</style>
+<style>
+.bookgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.bookgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:3px;display:block;cursor:zoom-in;transition:transform .15s,outline-color .15s;outline:1px solid transparent}
+.bookgrid img:hover{transform:scale(1.04);outline-color:#EC3A8C}
+.booklabel{margin:18px 0 10px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#D9B877}
+.booktabs{display:flex;flex-wrap:wrap;gap:8px}
+.booktabs button{background:none;border:1px solid #6b5546;color:#FCD7E6;padding:8px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.booktabs button.on,.booktabs button:hover{border-color:#EC3A8C;color:#FFF5E9}
+#bookzoom{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(20,13,10,.88);pointer-events:none}
+#bookzoom.show{display:flex}
+#bookzoom.tap{pointer-events:auto;cursor:zoom-out}
+#bookzoom img{max-width:92vw;max-height:92vh;object-fit:contain;border:2px solid #C5A46D;border-radius:3px}
+.pcard:hover{border-color:#EC3A8C!important}
+@media (max-width:760px){.bookgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+<script>
+function openBook(f){var p=document.getElementById('portfolio');if(!p)return;p.hidden=false;document.body.style.overflow='hidden';filterBook(f||'all');}
+function closeBook(){document.getElementById('portfolio').hidden=true;document.body.style.overflow='';}
+function filterBook(f){document.querySelectorAll('.booksec').forEach(function(s){s.style.display=(f==='all'||s.dataset.sec===f)?'':'none'});document.querySelectorAll('.booktabs button').forEach(function(b){b.classList.toggle('on',b.dataset.f===f)});}
+document.addEventListener('DOMContentLoaded',function(){
+ var z=document.getElementById('bookzoom');if(!z)return;var zi=z.querySelector('img');var hover=window.matchMedia('(hover:hover)').matches;
+ document.querySelectorAll('.booktabs button').forEach(function(b){b.onclick=function(){filterBook(b.dataset.f)}});
+ document.querySelectorAll('.bookgrid img').forEach(function(im){
+  if(hover){im.addEventListener('mouseenter',function(){zi.src=im.src;z.className='show'});im.addEventListener('mouseleave',function(){z.className=''});}
+  im.addEventListener('click',function(){zi.src=im.src;z.className='show tap'});
+ });
+ z.addEventListener('click',function(){z.className=''});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(z.className)z.className='';else if(!document.getElementById('portfolio').hidden)closeBook();}});
+});
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+<style>
+[style*="Playfair"]{font-family:'Cormorant Garamond',serif!important;font-weight:400!important}
+h1[style*="Playfair"],a[style*="clamp(40px"]{font-weight:300!important;letter-spacing:.08em!important}
+h2[style*="Playfair"]{font-weight:300!important}
+.door span[style*="Playfair"]{font-family:'Raleway',sans-serif!important;font-weight:200!important;text-transform:uppercase;letter-spacing:3px;font-size:16px!important;line-height:1.5}
+.nav a{color:#D9B877;text-decoration:none}.nav a:hover,.nav a[aria-current]{color:#EC3A8C}
+nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,minmax(0,1fr))}
+@media (max-width:1000px){nav[aria-label=Explore]{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:520px){nav[aria-label=Explore]{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.topbar a,.topbar span{white-space:nowrap}
+@media (max-width:640px){.topbar{font-size:9px!important;letter-spacing:1.5px!important;gap:10px!important}}
+@media (max-width:640px){
+ .topbar{flex-direction:column!important;align-items:center!important;text-align:center;gap:6px!important;font-size:10px!important;letter-spacing:1.5px!important}
+ .topbar span{white-space:normal!important}
+ h1[style*="Playfair"]{font-size:clamp(34px,10.5vw,60px)!important;white-space:nowrap;letter-spacing:.06em!important}
+ section[style*="padding: 112px"],section[style*="padding: 104px"]{padding-top:56px!important;padding-bottom:56px!important}
+ .nav{gap:8px 18px!important;font-size:11px!important}
+}
+@media (max-width:760px){
+ [style*="grid-template-columns"]:has(> img),#headshots{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .watch{grid-template-columns:1fr!important}
+ [style*="grid-template-columns"]:has(> img)>img{width:100%!important;max-width:none!important}
+ [style*="justify-content: space-between; align-items: baseline"]{flex-direction:column!important;align-items:flex-start!important;gap:2px!important}
+}
+@media (max-width:370px){.motto{white-space:normal!important;font-size:19px!important}.motto::before,.motto::after{display:none}
+}
+.tilepage article>p:first-child,.tilepage article>h3{text-align:center}
+.tilepage article>h3 img{margin:0 auto}
+.tilepage article>img:first-child{width:auto!important;margin:-22px -22px 0!important;max-width:none!important;align-self:stretch}
+.series-grid{}
+@media (max-width:1000px){.series-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (max-width:640px){.series-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}}
+.feat:hover{border-color:#EC3A8C!important}
+.motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(19px,4.8vw,34px);letter-spacing:.01em;line-height:1.3;color:#FFF5E9;margin:0;text-align:center;white-space:nowrap;display:flex;align-items:center;gap:18px;justify-content:center}
+.motto::before,.motto::after{content:"";width:40px;height:1px;background:#C5A46D;flex:none}
+@media (max-width:520px){.motto::before,.motto::after{width:18px}.motto{gap:10px}}
+</style>
+</head>
+<body>
+<div style="font-family: 'Lato', system-ui, sans-serif; color: #140D0A; background: #140D0A; width: 100%">
+<header id="top" style="background: #140D0A; color: #FFF5E9; padding: 24px 32px 28px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #C5A46D; border-bottom: 1px solid #C5A46D; padding: 10px 0; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #D9B877"><a href="index.html" style="color: #D9B877; text-decoration: none">&#8592; Home</a><a href="index.html#contact" style="color: #D9B877; text-decoration: none">Book Misty &#8594;</a></div>
+<a href="index.html" style="text-decoration: none; text-align: center; font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(40px, 7vw, 72px); line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; color: #FFF5E9">Misty Marie</a>
+<nav class="nav" aria-label="Sections" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase"><a href="acting.html">Acting</a><a href="modeling.html">Modeling</a><a href="music.html">Music</a><a href="skating.html">Ice Skating</a><a href="dance.html">Dance</a><a href="raspy.html">Raspy Remedies</a><a href="art.html">Artist</a><a href="author.html">Author</a><a href="series.html" aria-current="page">Model Vrs Mannequin</a></nav>
+</div>
+</header>
+
+<section style="background: #140D0A; padding: 32px 20px 24px; color: #FFF5E9">
+<div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 10px"><p style="margin: 0; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: #D9B877">An original series</p><h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(34px, 6vw, 64px); line-height: 1.1; color: #FFF5E9">Model Vrs Mannequin</h1><p style="margin: 0 auto; max-width: 620px; font-size: 16px; line-height: 1.7; color: #FCD7E6">Misty Marie versus the mannequins: fashion, dance and comedy, one outfit at a time. #ModelVrsMannequin #MistyMarie</p></div>
+<div style="max-width: 820px; width: 100%; margin: 0 auto"><button class="yt" data-id="3vswKwftid4" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/3vswKwftid4/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><p style="margin: 10px 0 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #FFF5E9">Thriller, performed by Model Vrs Mannequin</p></div>
+<div class="series-grid" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px"><button class="yt" data-id="uCdrHRvD9aI" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/uCdrHRvD9aI/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="lVSQWcb3u7M" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/lVSQWcb3u7M/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="6sIqDE0Usoc" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/6sIqDE0Usoc/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="vAxZ-GOE_g4" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/vAxZ-GOE_g4/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="zouyi9H31I4" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/zouyi9H31I4/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="oSl4_MkFtwk" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/oSl4_MkFtwk/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="ugsSCXQHBqk" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/ugsSCXQHBqk/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="Hy3Z4o359vs" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/Hy3Z4o359vs/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="xNq57cfzUJw" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/xNq57cfzUJw/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="MqvI88CjxMk" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/MqvI88CjxMk/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="c-04FnFvqyc" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/c-04FnFvqyc/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="rMbc-0aE7KM" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/rMbc-0aE7KM/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="LAeyFbDMlCY" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/LAeyFbDMlCY/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="jTTBOq8XT0U" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/jTTBOq8XT0U/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button><button class="yt" data-id="Z95PBweOF08" aria-label="Play video" style="position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0; border: 1px solid #C5A46D; border-radius: 4px; overflow: hidden; background: #000; cursor: pointer; display: block"><img src="https://i.ytimg.com/vi/Z95PBweOF08/hqdefault.jpg" alt="" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="width: 56px; height: 56px; border-radius: 50%; background: rgba(20,13,10,.75); border: 1px solid #C5A46D; color: #FFF5E9; font-size: 20px; display: flex; align-items: center; justify-content: center">&#9658;</span></span></button></div>
+<p style="margin: 8px 0 0; text-align: center; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: #D9B877">Where it started</p>
+<div class="tt-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px"><iframe src="https://www.tiktok.com/embed/v2/7029503847190088966" title="Model Vrs Mannequin on TikTok" loading="lazy" allow="encrypted-media; fullscreen" style="width: 325px; max-width: 100%; height: 740px; border: 0; border-radius: 8px; background: #000"></iframe><iframe src="https://www.tiktok.com/embed/v2/7032012269470993670" title="Model Vrs Mannequin on TikTok" loading="lazy" allow="encrypted-media; fullscreen" style="width: 325px; max-width: 100%; height: 740px; border: 0; border-radius: 8px; background: #000"></iframe><iframe src="https://www.tiktok.com/embed/v2/7039526257201122565" title="Model Vrs Mannequin on TikTok" loading="lazy" allow="encrypted-media; fullscreen" style="width: 325px; max-width: 100%; height: 740px; border: 0; border-radius: 8px; background: #000"></iframe><iframe src="https://www.tiktok.com/embed/v2/7239810558894165291" title="Model Vrs Mannequin on TikTok" loading="lazy" allow="encrypted-media; fullscreen" style="width: 325px; max-width: 100%; height: 740px; border: 0; border-radius: 8px; background: #000"></iframe><iframe src="https://www.tiktok.com/embed/v2/7195651861607664942" title="Model Vrs Mannequin on TikTok" loading="lazy" allow="encrypted-media; fullscreen" style="width: 325px; max-width: 100%; height: 740px; border: 0; border-radius: 8px; background: #000"></iframe></div>
+</div>
+</section>
+<script>document.addEventListener("click",function(e){var b=e.target.closest(".yt");if(!b)return;var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1&playsinline=1&rel=0";f.allow="autoplay; encrypted-media; fullscreen; picture-in-picture";f.allowFullscreen=true;f.title="Model Vrs Mannequin";f.style.cssText="width:100%;aspect-ratio:"+getComputedStyle(b).aspectRatio+";border:1px solid #C5A46D;border-radius:4px;display:block;background:#000";b.replaceWith(f);});</script>
+
+<section style="background: #140D0A; padding: 64px 32px; text-align: center">
+<p style="margin: 0 0 18px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 26px; color: #FFF5E9">Let&#8217;s work together.</p>
+<a class="hbtn" href="index.html#contact" style="display: inline-block; background: transparent; color: #FFF5E9; text-decoration: none; border: 1px solid #D9B877; padding: 16px 30px; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: background .2s, color .2s, border-color .2s">Book Misty</a>
+</section>
+
+<footer style="background: #140D0A; color: #FCD7E6; padding: 48px 32px">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<p style="margin: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #FFF5E9">Misty Marie</p>
+<nav aria-label="Social" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase"><a href="https://www.instagram.com/MistyMarieActress" style="color: #FCD7E6; text-decoration: none">Instagram</a><a href="https://instagram.com/modelmistymarie" style="color: #FCD7E6; text-decoration: none">Instagram · Model</a><a href="https://www.facebook.com/MistyMarieActress" style="color: #FCD7E6; text-decoration: none">Facebook</a><a href="https://www.imdb.me/MistyMarie" style="color: #FCD7E6; text-decoration: none">IMDb</a><a href="https://youtube.com/@mistymarie" style="color: #FCD7E6; text-decoration: none">YouTube</a><a href="https://www.tiktok.com/@mistymarieacts" style="color: #FCD7E6; text-decoration: none">TikTok</a><a href="https://soundcloud.com/misty-marie-3" style="color: #FCD7E6; text-decoration: none">SoundCloud</a><a href="https://www.modelmayhem.com/MistyMarie" style="color: #FCD7E6; text-decoration: none">Model Mayhem</a></nav>
+</div>
+<p style="max-width: 1240px; margin: 24px auto 0; font-size: 12px; letter-spacing: 1px; color: #B9A49B">Photography: D. Watkins Photography · Russell Harris · Jasmine Baeza · B. Wirie Photography · Mac Alexander · Vanie Povey Photography · Orenda Photo · LA Photography · Zachariah Shoots Photography</p>
+</footer>
+</div>
+
+<a id="totop" href="#top" aria-label="Back to top">&#8593; Top</a>
+<script>if(/[?&]sent=1/.test(location.search)){var m=document.getElementById("sentmsg");if(m)m.hidden=false;}</script>
+<script>(function(){var b=document.getElementById('totop');function f(){b.classList.toggle('show',window.scrollY>900)}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+</body>
+</html>
