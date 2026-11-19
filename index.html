@@ -31,6 +31,36 @@ details summary::-webkit-details-marker{display:none}
  [style*="max-width: 240px"],[style*="max-width: 320px"]{max-width:100%!important}
 }
 </style>
+<style>
+.bookgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.bookgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:3px;display:block;cursor:zoom-in;transition:transform .15s,outline-color .15s;outline:1px solid transparent}
+.bookgrid img:hover{transform:scale(1.04);outline-color:#EC3A8C}
+.booklabel{margin:18px 0 10px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#D9B877}
+.booktabs{display:flex;flex-wrap:wrap;gap:8px}
+.booktabs button{background:none;border:1px solid #6b5546;color:#FCD7E6;padding:8px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.booktabs button.on,.booktabs button:hover{border-color:#EC3A8C;color:#FFF5E9}
+#bookzoom{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(20,13,10,.88);pointer-events:none}
+#bookzoom.show{display:flex}
+#bookzoom.tap{pointer-events:auto;cursor:zoom-out}
+#bookzoom img{max-width:92vw;max-height:92vh;object-fit:contain;border:2px solid #C5A46D;border-radius:3px}
+.pcard:hover{border-color:#EC3A8C!important}
+@media (max-width:760px){.bookgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+<script>
+function openBook(f){var p=document.getElementById('portfolio');if(!p)return;p.hidden=false;document.body.style.overflow='hidden';filterBook(f||'all');}
+function closeBook(){document.getElementById('portfolio').hidden=true;document.body.style.overflow='';}
+function filterBook(f){document.querySelectorAll('.booksec').forEach(function(s){s.style.display=(f==='all'||s.dataset.sec===f)?'':'none'});document.querySelectorAll('.booktabs button').forEach(function(b){b.classList.toggle('on',b.dataset.f===f)});}
+document.addEventListener('DOMContentLoaded',function(){
+ var z=document.getElementById('bookzoom');if(!z)return;var zi=z.querySelector('img');var hover=window.matchMedia('(hover:hover)').matches;
+ document.querySelectorAll('.booktabs button').forEach(function(b){b.onclick=function(){filterBook(b.dataset.f)}});
+ document.querySelectorAll('.bookgrid img').forEach(function(im){
+  if(hover){im.addEventListener('mouseenter',function(){zi.src=im.src;z.className='show'});im.addEventListener('mouseleave',function(){z.className=''});}
+  im.addEventListener('click',function(){zi.src=im.src;z.className='show tap'});
+ });
+ z.addEventListener('click',function(){z.className=''});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(z.className)z.className='';else if(!document.getElementById('portfolio').hidden)closeBook();}});
+});
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 <style>
 [style*="Playfair"]{font-family:'Cormorant Garamond',serif!important;font-weight:400!important}
@@ -58,6 +88,9 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 }
 @media (max-width:370px){.motto{white-space:normal!important;font-size:19px!important}.motto::before,.motto::after{display:none}
 }
+.tilepage article>p:first-child,.tilepage article>h3{text-align:center}
+.tilepage article>h3 img{margin:0 auto}
+.tilepage article>img:first-child{width:auto!important;margin:-22px -22px 0!important;max-width:none!important;align-self:stretch}
 .feat:hover{border-color:#EC3A8C!important}
 .motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(19px,4.8vw,34px);letter-spacing:.01em;line-height:1.3;color:#FFF5E9;margin:0;text-align:center;white-space:nowrap;display:flex;align-items:center;gap:18px;justify-content:center}
 .motto::before,.motto::after{content:"";width:40px;height:1px;background:#C5A46D;flex:none}
@@ -71,6 +104,7 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 <div class="topbar" style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #C5A46D; border-bottom: 1px solid #C5A46D; padding: 10px 0; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: #D9B877"><span>The Official Site · Los Angeles · Available to Travel</span><a href="#contact" style="color: #D9B877; text-decoration: none">Book Misty &#8594;</a></div>
 <h1 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(64px, 12vw, 176px); line-height: 0.9; letter-spacing: 0.02em; text-transform: uppercase; text-align: center; color: #FFF5E9">Misty Marie</h1>
 <p style="margin: 0; text-align: center; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #D9B877; line-height: 2; max-width: 760px; align-self: center">Actor · Model · Dancer · Ice Skater · Runway Coach · Host · Director · Producer · Writer · Stylist · Artist</p>
+<nav class="nav" aria-label="Sections" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase"><a href="acting.html">Acting</a><a href="modeling.html">Modeling</a><a href="music.html">Music</a><a href="skating.html">Ice Skating</a><a href="dance.html">Dance</a><a href="raspy.html">Raspy Remedies</a><a href="art.html">Artist</a><a href="author.html">Author</a></nav>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; margin-top: 16px">
 <img src="1-photos/assets/f569375ae7.jpg" alt="Misty Marie in a navy knit set, looking over her shoulder" style="width: 100%; max-width: 560px; aspect-ratio: 720 / 875; height: auto; object-fit: cover; object-position: center top; border-radius: 4px; display: block; margin: 0 auto">
 <p class="motto">Reality in imaginary circumstances.</p>
@@ -106,28 +140,28 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 </a>
 
 <a href="dance.html" class="door" style="position: relative; flex: 1 1 130px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 22px 12px; min-height: 44px; text-decoration: none; transition: border-color 0.2s; border-bottom: 2px solid transparent">
-<img class="pop" src="1-photos/assets/01dca9a52d.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center top; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
+<img class="pop" src="1-photos/assets/64ae1ac53b.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center top; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
 <span style="font-size: 12px; letter-spacing: 2px; color: #D9B877">05</span>
 <span style="font-family: 'Playfair Display', serif; font-size: 26px; color: #FFF5E9">Dance</span>
-<span style="font-size: 12px; letter-spacing: 1px; color: #FCD7E6">Dance · Choreography</span>
+<span style="font-size: 12px; letter-spacing: 1px; color: #FCD7E6">Dance · Choreography · Teaching</span>
 </a>
 
 <a href="raspy.html" class="door" style="position: relative; flex: 1 1 130px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 22px 12px; min-height: 44px; text-decoration: none; transition: border-color 0.2s; border-bottom: 2px solid transparent">
-<img class="pop" src="1-photos/assets/f663ac7897.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center top; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
+<img class="pop" src="1-photos/assets/261d90cec7.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center 70%; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
 <span style="font-size: 12px; letter-spacing: 2px; color: #D9B877">06</span>
 <span style="font-family: 'Playfair Display', serif; font-size: 26px; color: #FFF5E9">Raspy Remedies</span>
 <span style="font-size: 12px; letter-spacing: 1px; color: #FCD7E6">Voice · Words · Sound</span>
 </a>
 
 <a href="art.html" class="door" style="position: relative; flex: 1 1 130px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 22px 12px; min-height: 44px; text-decoration: none; transition: border-color 0.2s; border-bottom: 2px solid transparent">
-<img class="pop" src="1-photos/assets/934d6b01e5.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center top; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
+<img class="pop" src="1-photos/assets/8260c012da.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
 <span style="font-size: 12px; letter-spacing: 2px; color: #D9B877">07</span>
 <span style="font-family: 'Playfair Display', serif; font-size: 26px; color: #FFF5E9">Artist</span>
 <span style="font-size: 12px; letter-spacing: 1px; color: #FCD7E6">Sketchbook</span>
 </a>
 
 <a href="author.html" class="door" style="position: relative; flex: 1 1 130px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 22px 12px; min-height: 44px; text-decoration: none; transition: border-color 0.2s; border-bottom: 2px solid transparent">
-<img class="pop" src="1-photos/assets/de40fb894a.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center top; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
+<img class="pop" src="1-photos/assets/574c5cc121.jpg" alt="" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(100% + 10px); width: 140px; height: 180px; object-fit: cover; object-position: center; border-radius: 3px; border: 2px solid #EC3A8C; box-shadow: 0 12px 32px rgba(0,0,0,0.55); z-index: 5; pointer-events: none">
 <span style="font-size: 12px; letter-spacing: 2px; color: #D9B877">08</span>
 <span style="font-family: 'Playfair Display', serif; font-size: 26px; color: #FFF5E9">Author</span>
 <span style="font-size: 12px; letter-spacing: 1px; color: #FCD7E6">Twinkle, as Misty Young</span>

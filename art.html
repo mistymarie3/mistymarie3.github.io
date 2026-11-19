@@ -31,6 +31,36 @@ details summary::-webkit-details-marker{display:none}
  [style*="max-width: 240px"],[style*="max-width: 320px"]{max-width:100%!important}
 }
 </style>
+<style>
+.bookgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.bookgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:3px;display:block;cursor:zoom-in;transition:transform .15s,outline-color .15s;outline:1px solid transparent}
+.bookgrid img:hover{transform:scale(1.04);outline-color:#EC3A8C}
+.booklabel{margin:18px 0 10px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#D9B877}
+.booktabs{display:flex;flex-wrap:wrap;gap:8px}
+.booktabs button{background:none;border:1px solid #6b5546;color:#FCD7E6;padding:8px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.booktabs button.on,.booktabs button:hover{border-color:#EC3A8C;color:#FFF5E9}
+#bookzoom{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(20,13,10,.88);pointer-events:none}
+#bookzoom.show{display:flex}
+#bookzoom.tap{pointer-events:auto;cursor:zoom-out}
+#bookzoom img{max-width:92vw;max-height:92vh;object-fit:contain;border:2px solid #C5A46D;border-radius:3px}
+.pcard:hover{border-color:#EC3A8C!important}
+@media (max-width:760px){.bookgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+<script>
+function openBook(f){var p=document.getElementById('portfolio');if(!p)return;p.hidden=false;document.body.style.overflow='hidden';filterBook(f||'all');}
+function closeBook(){document.getElementById('portfolio').hidden=true;document.body.style.overflow='';}
+function filterBook(f){document.querySelectorAll('.booksec').forEach(function(s){s.style.display=(f==='all'||s.dataset.sec===f)?'':'none'});document.querySelectorAll('.booktabs button').forEach(function(b){b.classList.toggle('on',b.dataset.f===f)});}
+document.addEventListener('DOMContentLoaded',function(){
+ var z=document.getElementById('bookzoom');if(!z)return;var zi=z.querySelector('img');var hover=window.matchMedia('(hover:hover)').matches;
+ document.querySelectorAll('.booktabs button').forEach(function(b){b.onclick=function(){filterBook(b.dataset.f)}});
+ document.querySelectorAll('.bookgrid img').forEach(function(im){
+  if(hover){im.addEventListener('mouseenter',function(){zi.src=im.src;z.className='show'});im.addEventListener('mouseleave',function(){z.className=''});}
+  im.addEventListener('click',function(){zi.src=im.src;z.className='show tap'});
+ });
+ z.addEventListener('click',function(){z.className=''});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(z.className)z.className='';else if(!document.getElementById('portfolio').hidden)closeBook();}});
+});
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 <style>
 [style*="Playfair"]{font-family:'Cormorant Garamond',serif!important;font-weight:400!important}
@@ -58,6 +88,9 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 }
 @media (max-width:370px){.motto{white-space:normal!important;font-size:19px!important}.motto::before,.motto::after{display:none}
 }
+.tilepage article>p:first-child,.tilepage article>h3{text-align:center}
+.tilepage article>h3 img{margin:0 auto}
+.tilepage article>img:first-child{width:auto!important;margin:-22px -22px 0!important;max-width:none!important;align-self:stretch}
 .feat:hover{border-color:#EC3A8C!important}
 .motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(19px,4.8vw,34px);letter-spacing:.01em;line-height:1.3;color:#FFF5E9;margin:0;text-align:center;white-space:nowrap;display:flex;align-items:center;gap:18px;justify-content:center}
 .motto::before,.motto::after{content:"";width:40px;height:1px;background:#C5A46D;flex:none}
@@ -74,7 +107,7 @@ nav[aria-label=Explore]{display:grid!important;grid-template-columns:repeat(8,mi
 </div>
 </header>
 
-<section style="background: #140D0A; padding: 24px 20px 40px">
+<section class="tilepage" style="background: #140D0A; padding: 24px 20px 40px">
 <article id="art" style="background: #241712; max-width: 860px; margin: 0 auto; border: 1px solid #C5A46D; border-radius: 6px; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
 <p style="margin: 0; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #FCD7E6">07 · The Artist</p>
 <h3 style="margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-size: 30px; line-height: 1.1; color: #FFF5E9">From the Studio</h3>
