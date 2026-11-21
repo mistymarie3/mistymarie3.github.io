@@ -57,7 +57,7 @@ details summary::-webkit-details-marker{display:none}
 #bookzoom.tap{pointer-events:auto;cursor:zoom-out}
 #bookzoom img{max-width:92vw;max-height:92vh;object-fit:contain;border:2px solid #C5A46D;border-radius:3px}
 .pcard:hover{border-color:#EC3A8C!important}
-@media (max-width:760px){.bookgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.bookgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
 </style>
 <script>
 function openBook(f){var p=document.getElementById('portfolio');if(!p)return;p.hidden=false;document.body.style.overflow='hidden';filterBook(f||'all');}
